@@ -23,5 +23,12 @@ export default {
 </template>
 
 <style scoped lang="scss">
-section {}
+section {
+    background-color: rgba(66, 65, 65, 0.213);
+    border: 25px;
+    flex-direction: row;
+    display: flex;
+    overflow-y: auto;
+
+}
 </style>

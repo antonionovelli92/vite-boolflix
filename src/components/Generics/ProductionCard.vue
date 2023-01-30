@@ -40,20 +40,67 @@ export default {
 </script>
 
 <template>
-    <ul>
-        <li>{{ title }}</li>
-        <li>{{ originalTitle }}</li>
-        <li>
-            <img v-if="hasFlag" :src="flagSrc" :alt="item.original_language">
-            <div v-else>{{ item.original_language }}</div>
-        </li>
-        <li>
-            <img :src="posterPath" :alt="title">
-        </li>
-        <li>
-            <i v-for="n in 5" :class="setStarClass(n)" class="fa-star"></i>
-        </li>
-    </ul>
+    <div class="poster d-flex  container">
+        <div class=" d-flex flex-direction-row ">
+            <div class=" cinema ">
+                <ul>
+                    <li>{{ title }}</li>
+                    <li>{{ originalTitle }}</li>
+                    <li>
+                        <img v-if="hasFlag" :src="flagSrc" :alt="item.original_language" class="flag">
+                        <div v-else>{{ item.original_language }}</div>
+                    </li>
+                    <li>
+                        <img class="cover" :src="posterPath" :alt="title">
+                    </li>
+                    <li>
+                        <i v-for="n in 5" :class="setStarClass(n)" class="fa-star"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
 </template>
 
-<script></script>
+<style scoped lang="scss">
+.poster {
+    flex-basis: 33%;
+    background-color: rgba(31, 29, 29, 0.417);
+
+
+
+    .cinema {
+        min-width: 100%;
+        min-height: 300px;
+    }
+
+    ul {
+
+        margin-bottom: 1rem;
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+
+        li {
+            list-style: none;
+            display: flex;
+
+            .flag {
+                max-width: 100%;
+                height: 12px;
+            }
+
+            .cover {
+
+
+                display: inline-block;
+            }
+        }
+    }
+
+
+}
+</style>

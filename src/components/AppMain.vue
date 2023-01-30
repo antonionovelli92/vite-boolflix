@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main class="container">
         <production-section collection="movies" title="Movies"></production-section>
         <production-section collection="series" title="TV Series"></production-section>
 
