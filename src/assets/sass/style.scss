@@ -1,0 +1,27 @@
+
+
+body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    
+}
+header {
+    background-color: rgb(50, 49, 49);
+    height: 100px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0px 1rem;
+
+        h2 {
+            color: red;
+            text-shadow: 1px 1px 10px black;
+            font-size: 75px;
+            cursor: pointer;
+        }
+    }
+}
